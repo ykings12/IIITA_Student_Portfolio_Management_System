@@ -1,7 +1,7 @@
 // const connectToDb = require("./database/db");
 var express = require("express");
 // import exphbs from "express-handlebars"
-const port = 5000;
+const port = 5100;
 
 const hbs = require("hbs");
 const path = require("path");
@@ -35,7 +35,7 @@ var db = mysql.createConnection({
   host: "localhost",
   user: "root",
   password: "",
-  database: "yash",
+  database: "se",
 });
 
 db.connect(function (err) {
@@ -376,6 +376,6 @@ app.post('/delete_student', (req, res) => {
 
 
 
-app.listen(5000, () => {
+app.listen(5100, () => {
   console.log('connected');
 });
