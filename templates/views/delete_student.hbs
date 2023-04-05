@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Search and Delete Student Information</title>
+  </head>
+  <body>
+    <h1>Delete Student Information</h1>
+    {{!-- <form action="/search" method="POST">
+      <label for="search">Search:</label>
+      <input type="text" id="search" name="search" placeholder="Enter name, enroll or email...">
+      <button type="submit">Search</button>
+    </form> --}}
+    <form action="/delete_student" method="POST">
+      <label for="delete">Delete:</label>
+      <input type="text" id="delete" name="delete" placeholder="Enter enroll...">
+      <button type="submit">Delete</button>
+    </form>
+  </body>
+</html>

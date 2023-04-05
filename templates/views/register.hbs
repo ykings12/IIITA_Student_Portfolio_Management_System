@@ -1,0 +1,289 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+
+
+
+/* .topnav {
+  overflow: hidden;
+  background-color: black;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav p{
+  color: #f2f2f2;
+  text-align: center;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  text-decoration: none;
+}
+.topnav .active {
+  cursor: pointer;
+}
+
+
+body {
+  transition: background-color .5s;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #000000;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 29px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+   */
+  
+  /* Set a style for all buttons */
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 50%;
+
+  
+/* Center and scale the image nicely */
+background-position: center;
+background-repeat: no-repeat;
+background-size:1280px 900px;
+
+}
+
+  .topnav {
+  overflow: hidden;
+  /* background-color: #00EEFD; */
+  background-color: white;
+  opacity : 0.7;
+}
+
+.topnav a {
+  float: left;
+  /* color: #f2f2f2; */
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav p{
+  color: black;
+  font-family: monospace;
+  font-size: 20px;
+  font-weight: bolder;
+  text-align: center;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  text-decoration: none;
+}
+.topnav .active {
+  cursor: pointer;
+}
+
+
+body {
+  transition: background-color .5s;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #00EEFD;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 80px;
+  /* padding-left: 20px; */
+  opacity : 0.7;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 45px;
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  padding-top: 15px;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+  
+  button {
+    background-color: rgb(0, 60, 255);
+    color: white;
+    padding: 14px 20px;
+    margin: 15px 0;
+    border: none;
+    cursor: pointer;
+    width: 35%;
+    border-radius: 7px;
+  }
+  
+  /* Add a hover effect for buttons */
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  
+  .container {
+    padding: 16px;
+  }
+  
+ 
+
+.col-md-8{
+	margin: auto auto;
+	width: 400px;
+    border: 2px;
+	border-radius: 20px;
+	position: relative;
+	/* background-color: rgb(97, 205, 182); */
+  background-color: #00F0FF;
+    padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+	/* opacity : 0.9; */
+}
+
+input[type=text], input[type=email], input[type=number],input[type=add], input[type=password] {
+    width: 100%;
+    padding: 10px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 7px;
+  }
+
+  </style>
+</head>
+<body background="/images/main2.jpeg">
+
+  <div class="topnav">
+    <a class="active" style="font-size: 31px;" onclick="openNav()">&#9776; </a>
+    <p>Welcome to IIITA Student Portfolio Management Registration Page</p>
+  </div>
+
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="main_admin">Admin</a>
+    <a href="#">Register</a>
+    <a href="main">Login</a>
+  </div>
+  
+  
+  <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+      document.getElementById("main").style.marginLeft = "250px";
+      document.body.style.backgroundColor = "rgba(0,0,0,1)";
+    }
+    
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+      document.getElementById("main").style.marginLeft= "0";
+      document.body.style.backgroundColor = "white";
+    }
+    </script>
+<div class="col-md-8" id="main_content">
+    <center><h3 id="MyHeading" style="font-size:29px; text-decoration: none" ">User Registration Form</h3></center>
+    <form name="myForm" action="/register" method="post" onsubmit="return validateform()">
+
+            <label for="name">Full Name:</label>
+            <input type="text" name="name" class="form-control" pattern="[A-Za-z]{2,20}" required>
+
+            <label for="enroll">Enrollment Number:</label>
+            <input type="text" name="enroll" class="form-control" pattern="^(IIT|IEC|IIB)\d{7}$" required>
+            <label for="email">Email ID:<br></label>
+            <input type="email" name="email" class="form-control"  pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$" required>
+            <label for="password"><br>Password:<br></label>
+            <input type="password" name="password" class="form-control" required>
+            <label for="nickname"><br>Nickname:<br></label>
+            <input type="text" name="nickname" class="form-control"required>
+            
+            <!-- <label for="address"><br>Address:<br></label>
+            <!-- <textarea type="add" name="address" class="form-control" required></textarea> -->
+            <!-- <input type="add" name="address" class="form-control"> --> 
+        
+        {{!-- <input type="submit" value="submit"> --}}
+        <button type="submit" class="btn btn-primary"  onclick="phonenumber(document.form1.text1)">Register</button>
+    </form>
+</div>
+
+</body>
+</html>
